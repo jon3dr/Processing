@@ -1,0 +1,17 @@
+color[] cores = {#3542AF,#FFB74B,#92E857,#FF6483};
+
+void settings() {
+  size(720,486);
+  println("Olá");
+}
+void setup() {
+  background(#BFEDFF);
+  frameRate(5);
+  println("SETUP");
+}
+void draw() {
+//  println("DRAW");
+  rect(mouseX,mouseY,150,150,12);
+  fill(cores[0]);
+  triangle (10,10,10,10,10,10);
+}
