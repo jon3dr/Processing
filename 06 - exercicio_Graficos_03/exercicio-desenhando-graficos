@@ -1,22 +1,61 @@
-color[] cores = {#3542AF,#FFB74B,#92E857,#FF6483,#FFFFFF};
+/*
+float l = 50;
+ float a = 50;
+ float m = 10;
+ float s = 5;
+ float q = 12;
+ 
+ int colunas = 5;
+ int linhas = 5 ;
+ 
+ size (640, 480);
+ background (#36C8F2);
+ stroke (#8A39FF);
+ fill(#F5DB14);
+ strokeWeight(3);
+ 
+ for(int i=0; i<5; i++){
+ rect (i%colunas*l, i*a, l, a, q);
+ }
+ */
 
-void settings() {
-  size(720,486);
-  println("Olá");
-}
-void setup() {
-  background(#BFEDFF);
-  frameRate(12);
-  println("SETUP");
-}
-void draw() {
-  fill (cores[1]);
-  stroke (cores[0]);
-  strokeWeight(6);
-  rect(10,10,150,150,12);
+String [] nomes = {"Jonnathan", "Marcela", "Daiane", "Keren", "Cris", "Matheus", "Nicolly"};
+int [] idades = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+boolean [] estados = {true, true, false, true, false, true, false};
 
-  fill(cores[0]);
-  stroke (cores[3]);
-  strokeWeight(6);
-  triangle(200,170,300,30,400,170);
+//criando uma matriz
+int [] numeros;
+numeros = new int[6];
+numeros[0] = 10;
+numeros[1] = 20;
+numeros[2] = 30;
+numeros[3] = 40;
+numeros[4] = 50;
+numeros[5] = 60;
+
+
+println(nomes[3]);
+println(idades[idades.length-1]);
+println();
+
+
+String[] nomesD = {"Felpudo","Fofura", "Lesmo", "Bugado", "Uruca", "Peluche"};
+
+for (int i=0; i<nomesD.length; i++){
+  println(nomesD[i]);
+}
+
+String [][] cidades = { 
+  {"São Paulo", "São José", "Curitiba", "Belo Horizonte"},
+  {"Nova York", "Los Angeles", "Bogotá", "Madrid"},
+  {"Patópolis", "Cucamonga", "Neverland", "Transilvânia"}
+};
+println();
+println();
+
+
+for (int i=0; i<cidades.length; i++){ // percorrendo matriz
+  for (int j=0; j<cidades[i].length; j++){
+    println(cidades[i][j]);
+  }
 }
